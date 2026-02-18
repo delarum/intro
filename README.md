@@ -1,0 +1,20 @@
+- Data types
+  - Arrays
+  - String
+  - Number
+      -Floating point Numbers
+      - iIntegers
+  - Booleans
+  - Undefined
+  - Null
+  - Objects    
+
+- conditional Statements
+- Loops
+- Functions
+- DOM
+- Asynchronous  Programming
+- API's
+- OOP
+- Testing With Jest
+- jQuery
