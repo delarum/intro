@@ -14,15 +14,16 @@
    // console.log('Number is 0')
 //}
 
-let amount = 500;
-let withdrawableAmount = 800
+//let amount = 500;
+//let withdrawableAmount = 800
 
-if(amount<0){
-    console.log('Invalid Withdrawal Amount')
-}else if (withdrawableAmount>amount){
-    console.log('Insufficient Funds')
-} else{
-    amount-=withdrawableAmount;
-    console.log('Withdrawal successful')
-    console.log(`Remaining balance:`,amount)
-}
+//if(amount<0){
+  //  console.log('Invalid Withdrawal Amount')
+//}else if (withdrawableAmount>amount){
+ //   console.log('Insufficient Funds')
+//} else{
+  //  amount-=withdrawableAmount;
+    //console.log('Withdrawal successful')
+    //console.log(`Remaining balance:`,amount)
+//}
+
