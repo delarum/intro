@@ -18,22 +18,24 @@ document.title = "Del's Website";// to change the title, the manipulation we are
 document.body.style.backgroundColor = "white"// changing the background color to white
 
 //ADDING ELEMENTS TO THE PAGE
-const body = document.body
+ const body = document.body
 body.append("Hello Del", "bye")// using append child requires a node and not a string and you can't add a bunch of things to append child
 
 
 //CREATE AN ELEMENT
 const h4 = document.createElement("h4")
-//h4.innerText = "TEXT HAS BEEN ADDED TO THE H4 ELEMENT"
-h4.textContent = "TEXT HAS BEEN ADDED TO THIS HTML ELEMENT"
+h4.innerText = "TEXT HAS BEEN ADDED TO THE H4 ELEMENT"
+//h4.textContent = "TEXT HAS BEEN ADDED TO THIS HTML ELEMENT"
 //Text content will print you out the exact text content all the extra spacing and inner text shows texts just as it appears on the document
 
 
 //NOW WE NEED TO ADD THIS ELEMENT TO THE DOCUMENT USING APPEND
 body.append(h4)
 //IF YOU OPEN ELEMENTS YOU CAN SEE IT ADDED IT TO THE BODY
+
+//access the elements first
 const h1Welcome= document.querySelector("#welcome")
-const h1Bye = document.querySelector("#bye")
+const h1Bye = document.querySelector("#bye")//alternative for .bye
 //how query selectors work? you query select then you can remove the item and how is it different from get element by
 h1Welcome.remove()
 
