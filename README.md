@@ -25,7 +25,7 @@
 
 // e.g a list of 3 items of class= "food" with the first item being Fruit
 
-//to grab the firts item we'll have to use (document.getElementByClassName('food').item(0))
+//to grab the first item we'll have to use (document.getElementByClassName('food').item(0))
 
 // in j query you can just use $('.food')'first() you just start with an object and chain methods to it
 
