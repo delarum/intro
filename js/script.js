@@ -176,25 +176,91 @@
 //     }
 // }
 
-const postContainer = document.getElementById("users-data");
-const button = document.getElementById("users-btn");
-async function getUserInfo() {
-    try {
-        const response = await fetch("https://fakestoreapi.com/users/1");
-        if (response.ok) {
-            const data = await response.json();
-            const html =  `
-                <div class="post">
-                  <h2>${data.name.firstname} ${data.name.lastname}</h2>
-                  <p><strong>Username:</strong> ${data.username}</p>
-                  <p><strong>Email:</strong> ${data.email}</p>  
-                </div>
-            `;
-            postContainer.innerHTML = html;
-        }
-    } catch (error) {
-        console.error("Error fetching user info:", error);
-    }
-}
+// const postContainer = document.getElementById("users-data");
+// const button = document.getElementById("users-btn");
+// async function getUserInfo() {
+//     try {
+//         const response = await fetch("https://fakestoreapi.com/users/1");
+//         if (response.ok) {
+//             const data = await response.json();// json is java script object notation it is a format for structuring data it is used to transmit data between a server and a web application as text that can be sent over a network and parsed into a native JavaScript object
+//             const html =  `
+//                 <div class="post">
+//                   <h2>${data.name.firstname} ${data.name.lastname}</h2>
+//                   <p><strong>Username:</strong> ${data.username}</p>
+//                   <p><strong>Email:</strong> ${data.email}</p>  
+//                 </div>
+//             `;
+//             postContainer.innerHTML = html;
+//         }
+//     } catch (error) {
+//         console.error("Error fetching user info:", error);
+//     }
+// }
 
-button.addEventListener("click", getUserInfo);
+// button.addEventListener("click", getUserInfo);
+
+let students = [
+    {
+        firstName: "Rick",
+        lastName: "Sanchez",
+        email: "rick@gmail.com",
+        phone: "+254712345678",
+        student_id: "STU001",
+        course: "Computer Science",
+        year: 3,
+        gpa: 3.8
+    },
+    {
+        firstName: "Morty",
+        lastName: "Smith",
+        email: "morty@gmail.com",
+        phone: "+254712345679",
+        student_id: "STU002",
+        course: "Mathematics",
+        year: 2,
+        gpa: 3.5
+    },
+    {
+        firstName: "Summer",
+        lastName: "Smith",
+        email: "summer@gmail.com",  
+        phone: "+254712345680",
+        student_id: "STU003",
+        course: "Physics",
+        year: 1,
+        gpa: 3.2
+    },
+    {
+        firstName: "Beth",
+        lastName: "Smith",
+        email: "beth@gmail.com",
+        phone: "+254712345681",
+        student_id: "STU004",
+        course: "Biology",
+        year: 2,
+        gpa: 3.6
+    }
+]
+
+// console.log(students) // Output: All student objects in the array
+// console.log(students[0]) // Output: First student object (Rick Sanchez)
+console.log(students[0].firstName) // Output: "Rick" FETCHING DATAfrom a certain array
+console.log(students[0].lastName) // Output: "Sanchez"
+console.log(students[0].email) // Output: "
+
+letStudentsInfo = document.getElementById("rick-container");
+
+students.forEach(student => {
+    const studentDiv = document.createElement("div");
+    studentDiv.innerHTML = `
+        <h2>${student.firstName} ${student.lastName}</h2>  
+        <p><strong>Email:</strong> ${student.email}</p>
+        <p><strong>Phone:</strong> ${student.phone}</p>
+        <p><strong>Student ID:</strong> ${student.student_id}</p>
+        <p><strong>Course:</strong> ${student.course}</p>
+        <p><strong>Year:</strong> ${student.year}</p>
+        <p><strong>GPA:</strong> ${student.gpa}</p>
+    `;
+    letStudentsInfo.appendChild(studentDiv);
+})
+// we are creating a div for each student and then we are appending it to the container with the id rick-container

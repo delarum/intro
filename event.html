@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation Practice</title>
+    <style>
+        .grandparent {
+            background-color: blue;
+            padding: 50px;
+        }
+
+        .parent {
+            background-color: green;
+            padding: 50px;
+        }
+
+        .child {
+            background-color: red;
+            padding: 50px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grandparent">
+        Grandparent (Blue)
+        <div class="parent">
+            Parent (Green)
+            <div class="child">
+                Child (Red)
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const grandparent = document.querySelector(".grandparent");
+        const parent = document.querySelector(".parent");
+        const child = document.querySelector(".child");
+
+        grandparent.addEventListener("click", e => {
+            console.log("Grandparent clicked");
+        }, { capture: true });
+
+        parent.addEventListener("click", e => {
+            console.log("Parent clicked");
+        });
+
+        child.addEventListener("click", e => {
+            console.log("Child clicked");
+        });
+    </script>
+
+</body>
+</html>
+
